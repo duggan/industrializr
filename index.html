@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>A moment sir; please describe your contraption?</title>
+	 <link rel="stylesheet" type="text/css" href="style.css" charset="utf-8" media="all" />
+	 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<script type="text/javascript">
+var _this = ["Textiles","Cotton spinning","A water frame","A Spinning Jenny","A Spinning Mule","A cotton mill","A flying shuttle","a power loom",
+"Steam power","A steam engine","A locomotive","A steamboat","A coal mine","Ironworks","Wrought iron","Crucible steel",
+"A Lunar Society","A Lexicon Technium","A Cycloapaedia","Machine tools","A lathe","Gas lighting","A railway network","A trade union","The Patent Act","A factory",
+"Mass education","Urbanisation","A canal system","The war of 1812","Divison of labour","Protestant work ethic"
+];
+var _that = ["Your young wife","The local constabulary","The middle class","The common man","Child labour","Luddites","The wetlands","Farms","The cotton industry",
+"The poor","The upper class","Rural communities","Your sister Muriel","Pastors","Craftsmen","Parochialism","The nobility","Miners","Families"];
+
+function randomThis(){
+	return _this[Math.floor(Math.random()*_this.length)];
+}
+function randomThat(){
+	return _that[Math.floor(Math.random()*_that.length)] + '!';
+}
+function render(){
+	document.getElementById('this').innerHTML = randomThis();
+	document.getElementById('that').innerHTML = randomThat();
+return false;
+}
+	</script>
+
+</head>
+
+<body> 
+  <div class="thickbar"></div> 
+  <div class="thinbar"></div> 
+  <div id="main"> 
+    <div id="tweet"> 
+      <a id="tweet" href="http://twitter.com/share" class="twitter-share-button" data-url="http://industrializr.com" data-text='A moment sir; please describe your contraption?' data-count="horizontal">Tweet</a> 
+    </div> 
+    <div id="what">A moment sir; please describe your contraption?</div> 
+    <div id="basically">Well, it is in essence</div> 
+    <div id="this"></div> 
+    <div id="for">for</div> 
+    <div id="that"></div> 
+    <a id="refresh" href="/" onclick="return render();">Refresh</a> 
+    <div style="clear:both"></div> 
+  </div> 
+  <div class="thinbar"></div> 
+  <div class="thickbar"> 
+    <div class="yup">Follow me on Twitter, <a href="http://twitter.com/duggan" target="blank">@duggan</a>
+    </div> 
+    <div id="copyright">Shamelessly plundered from <a href="http://itsthisforthat.com/">It's This For That</a>.</div> 
+  </div> 
+<script type="text/javascript"> 
+document.getElementById('this').addEventListener('click', render, false);
+document.getElementById('that').addEventListener('click', render, false);
+render();
+</script> 
+</body> 
+</html> 
